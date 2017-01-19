@@ -1,0 +1,101 @@
+html
+{
+  box-sizing: border-box;
+  background:#faf8fa;
+  color: #bbb1bf;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.main {
+  height: 100vh;
+}
+
+.panels {
+  height: 85vh;
+  display: flex;
+}
+
+.panel {
+  background:#bbb1bf;
+  text-align: center;
+  transition:
+    flex 0.7s cubic-bezier(0.1,-0.1, 0.1,-0.1);
+  background-size:cover;
+  background-position:center;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.panel1 { background-image:url('imgs/man2.jpg'); }
+.panel2 { background-image:url('imgs/working1.jpg'); }
+.panel3 { background-image:url('imgs/birds-alt.jpg'); }
+
+.panel.open {
+  flex: 4;
+}
+
+.panelButton {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 100px;
+  border: 2px solid #e5dce8;
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #bbb1bf;
+}
+
+.menu {
+  display: flex;
+  width: 100vw;
+  height: 15vh;
+  background-color: #252525;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile {
+  align-self: flex-end;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.menu ul {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu li {
+  text-align: center;
+  flex-grow: 1;
+  margin: 0 0 auto;
+  list-style: none;
+}
+
+#about {
+  height: 100vh;
+  background-color: green;
+}
