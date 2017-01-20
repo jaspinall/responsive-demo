@@ -162,15 +162,8 @@ nav a:hover {
   list-style: none;
 }
 
-
-#details {
-  height: 100vh;
-  background-color: red;
-}
-
-#contact {
-  height: 100vh;
-  background-color: blue;
+.lead {
+  font-weight: 500;
 }
 
 /* about section */
@@ -179,17 +172,66 @@ nav a:hover {
   height: 100vh;
 }
 
+#about h1 {
+  margin-top: 80px;
+}
+
 .aboutGroup {
   display: flex;
+  height: 100%;
 }
 
 .aboutBox {
   padding: 30px;
   text-align: justify;
   flex-grow: 1;
+  height: 100%;
 }
 
-@media screen and (max-width : 450px) {
+/* details section */
+
+#details {
+  padding: 30px;
+  height: 100vh;
+  background-image: url('imgs/work-lg.jpg');
+  background-size:cover;
+  background-position:center;
+}
+
+#details h1 {
+  margin-top: 80px;
+}
+
+#contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#contact h1 {
+  margin-top: 80px;
+}
+
+footer {
+  align-self: flex-end;
+  width: 100vw;
+  height: 80px;
+  background-color: #252525;
+}
+
+@media screen and (min-width : 501px) and  (max-width : 950px) {
+
+  .aboutBox {
+    padding: 10px;
+    font-size: 0.9em;
+    text-align: left;
+  }
+}
+
+/* mobile display */
+
+@media screen and (max-width : 500px) {
 
   nav {
     position: fixed;
@@ -258,6 +300,10 @@ nav a:hover {
 
   .aboutBox {
     padding: 5px;
+  }
+
+  #details {
+    background-image: url('imgs/work-small.jpg');
   }
 
 }

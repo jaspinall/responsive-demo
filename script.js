@@ -8,7 +8,6 @@ const hamburger = document.querySelector('.hamburger');
 const closeMenu = document.querySelector('.closeMenu');
 const menu = document.querySelector('.menu');
 
-
 // gallery animation at the top
 function toggleOpen() {
   panels.forEach((panel) => {
