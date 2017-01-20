@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
     <title>Demo Landing Page</title>
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="script.js" async></script>
@@ -9,6 +10,17 @@
   <body>
 
     <section class="main">
+      <nav>
+        <img class="hamburger" src="imgs/hamburger.svg" />
+        <img class="closeMenu" src="imgs/hamburgerClose.svg" />
+        <div class="menu">
+          <ul className="menuItems">
+            <li class="menuItem"><a href="#about">ABOUT</a></li>
+            <li class="menuItem"><a href="#details">PHILOSOPHY</a></li>
+            <li class="menuItem"><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
       <div class="panels">
         <div class="panel panel1">
           <p>your vision</p>
@@ -17,7 +29,7 @@
           </div>
         </div>
         <div class="panel panel2">
-          <p>our award-winning team</p>
+          <p>our team</p>
           <div class="panelButton button2">
             <a href="#details">how we work</a>
           </div>
@@ -29,13 +41,6 @@
           </div>
         </div>
       </div>
-      <nav class="menu">
-        <ul className="menuItems">
-          <li class="menuItem"><a href="#about">ABOUT</a></li>
-          <li class="menuItem"><a href="#details">PHILOSOPHY</a></li>
-          <li class="menuItem"><a href="#contact">CONTACT</a></li>
-        </ul>
-      </nav>
     </section>
 
     <section id="about">
@@ -44,7 +49,7 @@
     <section id="details">
     </section>
 
-    <section class="contact">
+    <section id="contact">
     </section>
 
   </body>

@@ -17,12 +17,20 @@ body, ul {
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* main panel styling */
+
 .main {
   height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .panels {
-  height: 85vh;
+  height: 90vh;
   display: flex;
 }
 
@@ -40,9 +48,42 @@ body, ul {
   flex-direction: column;
 }
 
-.panel1 { background-image:url('imgs/man2.jpg'); }
-.panel2 { background-image:url('imgs/working1.jpg'); }
-.panel3 { background-image:url('imgs/birds-alt.jpg'); }
+.panel1 { background-image:url('imgs/man-lg.jpg'); }
+.panel2 { background-image:url('imgs/working-lg.jpg'); }
+.panel3 { background-image:url('imgs/birds-lg.jpg'); }
+
+.panel p {
+  font-size: 1.7em;
+}
+
+.panel2 {
+  justify-content: center;
+}
+
+.panel1 p, .panel1 a {
+  color: #bbb1bf;
+  margin-top: -200px;
+}
+
+.button1 {
+  border: 2px solid #bbb1bf;
+}
+
+.panel2 p, .panel2 a {
+  color: #020202;
+}
+
+.button2 {
+  border: 2px solid #020202;
+}
+
+.panel3 p, .panel3 a {
+  color: #656565;
+}
+
+.button3 {
+  border: 2px solid #656565;
+}
 
 .panel.open {
   flex: 4;
@@ -52,20 +93,35 @@ body, ul {
   width: 200px;
   height: 50px;
   margin-bottom: 100px;
-  border: 2px solid #e5dce8;
   font-size: 1.5em;
 }
 
-a {
-  text-decoration: none;
+/* navstyling */
+
+nav {
+  width: 100vw;
+  height: 10vh;
+  background-color: #252525;
+}
+
+nav a {
   color: #bbb1bf;
 }
 
+.hamburger {
+  display: none;
+}
+
+.closeMenu {
+  display: none;
+}
+
 .menu {
+  visibility: visible;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   display: flex;
-  width: 100vw;
-  height: 15vh;
-  background-color: #252525;
   align-items: center;
   justify-content: center;
 }
@@ -81,6 +137,7 @@ a {
 }
 
 .menu ul {
+  visibility: visible;
   flex-grow: 1;
   display: flex;
   flex-direction: row;
@@ -95,7 +152,78 @@ a {
   list-style: none;
 }
 
+
 #about {
   height: 100vh;
   background-color: green;
+}
+
+#details {
+  height: 100vh;
+  background-color: red;
+}
+
+#contact {
+  height: 100vh;
+  background-color: blue;
+}
+
+
+@media screen and (max-width : 450px) {
+
+  nav {
+    position: fixed;
+    height: 77px;
+    top: 0;
+    left: 0;
+  }
+
+  .hamburger {
+    display: inline-block;
+    visibility: visible;
+    height: 30px;
+    margin: 20px;
+  }
+
+  .closeMenu {
+    display: inline-block;
+    visibility: hidden;
+    height: 40px;
+    margin: 15px;
+    float: right;
+  }
+
+  .menu {
+    transform: translateY(-150%);
+    transition:
+      transform 0.5s cubic-bezier(0.51, 0.1, 0.11, 0.97);
+    height: 250px;
+    width: 100vw;
+    background-color: #252525;
+  }
+
+  .menu ul {
+    height: 250px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu li {
+    text-align: center;
+    flex-grow: 1;
+    margin: 0 0 auto;
+    list-style: none;
+  }
+
+  .panels {
+    background-image: url('imgs/man-small.jpg');
+  }
+
+  .panel {
+    display: none;
+  }
+
 }
