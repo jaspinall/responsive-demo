@@ -2,10 +2,11 @@ html
 {
   box-sizing: border-box;
   background:#faf8fa;
-  color: #bbb1bf;
+  color: #656565;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: 200;
+  text-align: center;
 }
 
 body, ul {
@@ -19,6 +20,10 @@ body, ul {
 
 a {
   text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
 }
 
 /* main panel styling */
@@ -70,11 +75,11 @@ a {
 }
 
 .panel2 p, .panel2 a {
-  color: #020202;
+  color: #252525;
 }
 
 .button2 {
-  border: 2px solid #020202;
+  border: 2px solid #252525;
 }
 
 .panel3 p, .panel3 a {
@@ -92,6 +97,7 @@ a {
 .panelButton {
   width: 200px;
   height: 50px;
+  padding: 5px;
   margin-bottom: 100px;
   font-size: 1.5em;
 }
@@ -106,6 +112,10 @@ nav {
 
 nav a {
   color: #bbb1bf;
+}
+
+nav a:hover {
+  color: #656565;
 }
 
 .hamburger {
@@ -153,11 +163,6 @@ nav a {
 }
 
 
-#about {
-  height: 100vh;
-  background-color: green;
-}
-
 #details {
   height: 100vh;
   background-color: red;
@@ -168,6 +173,21 @@ nav a {
   background-color: blue;
 }
 
+/* about section */
+#about {
+  padding: 30px;
+  height: 100vh;
+}
+
+.aboutGroup {
+  display: flex;
+}
+
+.aboutBox {
+  padding: 30px;
+  text-align: justify;
+  flex-grow: 1;
+}
 
 @media screen and (max-width : 450px) {
 
@@ -182,7 +202,7 @@ nav a {
     display: inline-block;
     visibility: visible;
     height: 30px;
-    margin: 20px;
+    margin: 20px 0 0 -250px;
   }
 
   .closeMenu {
@@ -224,6 +244,20 @@ nav a {
 
   .panel {
     display: none;
+  }
+
+  #about {
+    padding: 10px;
+    height: 100%;
+  }
+
+  .aboutGroup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutBox {
+    padding: 5px;
   }
 
 }
